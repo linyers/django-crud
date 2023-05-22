@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Django Tasks</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, tempore eius ab mollitia esse, deleniti delectus
+            quaerat dolores perspiciatis accusamus inventore amet. Rem blanditiis architecto repudiandae maiores iure, qui
+            dolor.
+            Doloribus, quia ducimus. Ab illo incidunt sapiente? Enim nisi dolorem dolore at impedit eum, quidem ex cum,
+            maxime modi odit velit explicabo qui? Veniam totam itaque ratione non reiciendis ex?
+            Dolorum ratione numquam, earum possimus vel omnis debitis doloremque non facere officia veritatis nostrum quasi
+            a nulla quam neque. Sunt, debitis earum odio sint in corrupti placeat odit eum quae!
+            Numquam commodi quam provident magnam maxime tempora, eius iste sapiente, iure ipsa inventore officiis incidunt
+            quia voluptate aliquid. Exercitationem esse explicabo corrupti obcaecati vel rerum quibusdam reiciendis atque
+            temporibus cupiditate.
+            Consectetur sapiente ratione facere soluta aut libero, mollitia cupiditate, nesciunt ipsam, hic corrupti! Error
+            perferendis explicabo assumenda dignissimos temporibus maiores tempore natus blanditiis neque quasi. Illum quas
+            ad consequatur rem.
+            Similique culpa, possimus unde praesentium, porro ea deserunt repellendus voluptatibus quis eaque vero aperiam
+            soluta laborum cum sapiente ipsa excepturi nulla, iste recusandae expedita itaque earum. Optio saepe fugit
+            veritatis!
+            Eaque quasi ea nisi tempore corrupti delectus repellat iure modi facilis non iste, voluptatem soluta temporibus
+            totam vel optio pariatur rerum, cumque in illum nihil aliquam ut dolore suscipit. Ipsa?
+            Similique, consequuntur? Deleniti eius aspernatur corrupti facilis ipsam at saepe sunt, nostrum maiores quasi
+            repudiandae asperiores doloribus dolore, sed, vero magnam nobis natus sapiente eum? Modi labore quam culpa
+            atque.
+            Fugiat similique eaque, maxime veniam nostrum aliquid, asperiores impedit corporis ex, tempore fuga ut itaque
+            quas veritatis cum labore excepturi minima. Similique, suscipit. At animi reprehenderit similique quis quod
+            beatae?
+            Consequatur illum dolorem recusandae quasi odio nihil et harum hic magnam nemo? Quam voluptas optio quisquam
+            necessitatibus nemo. Magni exercitationem quasi, enim libero illum dolore natus atque ab tempora accusamus!</p>
+        
+        {% if request.user.is_authenticated %}
+        <div class="text-center">
+            <a href="/signin" class="btn btn-primary disabled">
+                Signin
+            </a>
+            <a href="/signup" class="btn btn-primary disabled">
+                Signup
+            </a>
+        </div>
+        {% else %}
+        <div class="text-center">
+            <a href="/signin" class="btn btn-primary">
+                Signin
+            </a>
+            <a href="/signup" class="btn btn-primary">
+                Signup
+            </a>
+        </div>
+        {% endif %}
+    </section>
+</main>
+{% endblock%}

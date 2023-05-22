@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            <form method="POST" class="card card-body">
+                <h1 class="text-center">Signin</h1>
+                {% if error %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{error}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" class="form-control"
+                        placeholder="Write your username">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control"
+                        placeholder="Write your password">
+                </div>
+
+                <button class="btn btn-primary">Signin</button>
+
+                <p class="pt-3">Do you not have an account?</p>
+                <a href="/signup">Create now</a>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
